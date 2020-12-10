@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'main',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -53,7 +54,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    
 ]
 
 ROOT_URLCONF = 'DGTSQD.urls'
@@ -130,7 +131,7 @@ STATIC_URL = '/static/'
 #]
 STATICFILES_DIRS = BASE_DIR / "static",
 
-STATICFILES_STORAGE  = 'whitenoise.storage.CompressesManifestStaticFileStorage'
+#STATICFILES_STORAGE  = 'whitenoise.storage.CompressesManifestStaticFileStorage'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
@@ -142,3 +143,30 @@ LOGOUT_REDIRECT_URL = "/basic"
 
 AUTH_PROFILE_MODULE = 'main.UserProfile'
 
+#azure storages
+#DEFAULT_FILE_STORAGE = 'storages.backends.azure_storage.AzureStorage'
+#STATICFILES_STORAGE = 'storages.backends.azure_storage.AzureStorage'
+
+STATIC_LOCATION = "static"
+MEDIA_LOCATION = "media"
+
+#AZURE_ACCOUNT_NAME = "dgtsqd"
+#AZURE_CUSTOM_DOMAIN = f'{AZURE_ACCOUNT_NAME}.blob.core.windows.net'
+#AZURE_LOCATION=f'{AZURE_ACCOUNT_NAME}.blob.core.windows.net'
+#STATIC_URL = f'https://{AZURE_CUSTOM_DOMAIN}/{STATIC_LOCATION}/'
+#MEDIA_URL = f'https://{AZURE_CUSTOM_DOMAIN}/{MEDIA_LOCATION}/'
+
+#new
+STATICFILES_DIRS =  BASE_DIR / "static",
+
+AZURE_ACCOUNT_NAME = 'dgtsqd'
+AZURE_ACCOUNT_KEY = 'ife/0ulHHHuns7puU2KTY06qkO6v2yVfLxW1eeQR/bMzh+tfDMsN86hJbsTRuT26dxJMnQuS73n5ffjzchomlA=='
+AZURE_CUSTOM_DOMAIN = f'{AZURE_ACCOUNT_NAME}.blob.core.windows.net'
+AZURE_LOCATION = 'static'
+AZURE_CONTAINER = 'static'
+
+STATIC_LOCATION = 'static'
+STATIC_URL = f'https://{AZURE_CUSTOM_DOMAIN}/{STATIC_LOCATION}/'
+
+STATICFILES_STORAGE = 'storages.backends.azure_storage.AzureStorage'
+DEFAULT_FILE_STORAGE = 'mysite.custom_azure.AzureMediaStorage'
