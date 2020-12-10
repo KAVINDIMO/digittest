@@ -1,0 +1,225 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--google icons-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!--font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>CONTACT US</title>
+  </head>
+  <body>
+  <link rel='stylesheet'  href="{% static 'CSS\master.css' %}">
+  <!--NAV BAR--       <nav class="navbar navbar-dark bg-dark">     -->
+ <nav class="navbar fixed-top navbar-expand-sm bg-light">
+<nav class="navbar fixed-top navbar-expand-lg navbar-warning bg-light">
+<!--
+<div class="card" style="width: 200px;">
+      <img style="width: 200px;" src="{% static 'images/logo.png' %}" class="img" alt="not found">
+  </div>
+-->
+<div style="width: 200px;">
+      <img style="width: 200px;" src="{% static 'images/logo.png' %}" class="img" alt="not found">
+  </div>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" style="color: #ff4500" href="/basic"><span class="material-icons">home</span>HOME<!--<span class="sr-only">(current)</span>--></a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" href="/newspost"><span class="material-icons">article</span>TECH BYTES</a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" href="/achievements"><span class="material-icons">emoji_events</span>ACHIEVEMENTS</a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" href="/project"><span class="material-icons">star</span>PROJECTS</a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" href="/events"><span class="material-icons">school</span>EVENTS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/tmembers"><span class="material-icons">engineering</span>TOP SQUAD MEMBERS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/news"><span class="material-icons">text_snippet</span>NEWS</a>
+      </li>
+      {% if user.is_authenticated %}
+        <li class="nav-item">
+        <a class="nav-link" href="/comment"><span class="material-icons">message</span>REVIEW</a>
+      </li>
+      <div style="border-radius:50%" class="btn-group">
+     <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      {{request.user.username}}
+     </button>
+      <div class="dropdown-menu">
+               <a class="dropdown-item" href="/viewprofile">EDIT PROFILE</a>
+              <div class="dropdown-divider"></div>
+               <a class="dropdown-item" href="/dispprofile">VIEW PROFILE</a>
+              </div>
+                
+        <li class="nav-item">
+        <a class="nav-link" href="/logout"><span class="material-icons">lock_open</span>LOGOUT</a>
+      </li>
+      {% else %}
+     &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="/login"><span class="material-icons">login</span>SIGNUP</a>
+      </li>
+      {% endif %}
+    
+  
+
+</div>
+    </ul>
+    <span class="navbar-text">
+     <!--text here-->
+    </span>
+  </div>
+</nav>
+</nav>
+
+
+
+<body id="bg" style="background-image: url('{% static "images/q3.jpg"%}'); background-size: cover; background-size:100%;"> </body>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+&emsp;&emsp;&emsp;&emsp;&emsp;
+<a href="https://www.instagram.com/digitsquad_vit/"><i class="fa fa-instagram" style="font-size:100px;color:#FF0000" ></i></a>
+<b><a style="font-size:20px;color:#FFFFFF"><a href="https://www.instagram.com/digitsquad_vit/" style="color:#FF0000">
+INSTAGRAM</a></a></b>&emsp;&emsp;&emsp;&emsp;&emsp;
+
+<a href="https://www.facebook.com/digitsquadvitv/"><i  class="fa fa-facebook" style="font-size:100px;color:#0000FF" ></i></a>
+<b><a style="font-size:20px;color:#FFFFFF"><a href="https://www.facebook.com/digitsquadvitv/">
+FACEBOOK</a></a></b>  &emsp;&emsp;&emsp;&emsp;&emsp;
+
+<a href="#"><i class="fa fa-twitter" style="font-size:100px;color:#00AAFF" ></i></a>
+<b><a style="font-size:20px;color:#FFFFFF">TWITTER</a></b>&emsp;&emsp;&emsp;&emsp;&emsp;
+
+<a href="https://www.youtube.com/channel/UCXpIVRiyfsMB2aXXn2yq6LA"><i class="fa fa-youtube" style="font-size:100px;color:#FF0000" ></i></a>
+<b><a style="font-size:20px;color:#FFFFFF"><a href="https://www.youtube.com/channel/UCXpIVRiyfsMB2aXXn2yq6LA "style="color:#FF0000">
+YOUTUBE</a></a></b>  &emsp;&emsp;&emsp;&emsp;&emsp;
+
+<a href="#"><i class="fa fa-linkedin" style="font-size:100px;color:#00AAFF" ></i></a>
+<b><a style="font-size:20px;color:#FFFFFF">LINKEDIN</a></b>
+
+
+
+<nav class="navbar fixed-bottom navbar-expand-sm bg-light">
+<nav class="navbar fixed-bottom navbar-expand-lg navbar-warning bg-light">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/basic"><span class="material-icons">home</span>HOME</a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" href="/members"><span class="material-icons">emoji_people</span>MEMBERS</a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" href="/pybot"><span class="material-icons">location_searching</span>SQUAD SEARCH</a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" href="/aboutus"><span class="material-icons">mail</span>ABOUT US</a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" style="color: #ff4500" href="/contactus"><span class="material-icons">phonelink_ring</span>CONTACT US</a>
+      </li>
+      {% if request.user.is_superuser %}
+          &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+          &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+          <!--<li class="nav-item">
+          <a class="nav-link" href="/upload"><span class="material-icons">question_answer</span>BYTES UPLOAD</a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link" href="/uploadevents"><span class="material-icons">question_answer</span>EVENTS UPLOAD</a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link" href="/uploadproject"><span class="material-icons">question_answer</span>PROJECT UPLOAD</a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link" href="/addachievements"><span class="material-icons">question_answer</span>ACHIEVEMENTS UPLOAD</a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link" href="/reportnews"><span class="material-icons">question_answer</span>ADD NEWS</a>
+          </li>-->
+           
+<div style="border-radius:50%" class="btn-group">
+     <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      ADMIN UPLOAD PANEL
+     </button>
+      <div class="dropdown-menu">
+               <a class="nav-link" href="/upload"><span class="material-icons">question_answer</span>BYTES UPLOAD</a>
+              <div class="dropdown-divider"></div>
+               <a class="nav-link" href="/uploadevents"><span class="material-icons">question_answer</span>EVENTS UPLOAD</a>
+              <div class="dropdown-divider"></div>
+              <a class="nav-link" href="/uploadproject"><span class="material-icons">question_answer</span>PROJECT UPLOAD</a>
+              <div class="dropdown-divider"></div>
+              <a class="nav-link" href="/addachievements"><span class="material-icons">question_answer</span>ACHIEVEMENTS UPLOAD</a>
+              <div class="dropdown-divider"></div>
+              <a class="nav-link" href="/reportnews"><span class="material-icons">question_answer</span>ADD NEWS</a>
+              </div>
+      {% else %}
+      {% endif %}
+    </ul>
+    <span class="navbar-text">
+     <!--text here-->
+    </span>
+  </div>
+</nav>
+</nav>
+  </body>
+  
+<style type="text/css">
+  #social {
+     text-align:center;
+     background-color:#000000
+       } 
+   #carousel{
+     padding :00px;
+    
+   }
+   .container{
+     padding-top: 20px;
+    padding-right: 5px;
+    padding-bottom: 20px;
+    padding-left: 200px;
+
+   }
+   <style type="text/css">
+   body 
+   { background: yellow !important; 
+   }
+   .card{
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    margin-left:0px;
+    margin-right:0px;
+    margin-up:0px;
+    margin-down:0px;
+    background-color:#FF0000;
+    border-radius:0px;
+
+   } 
+</style>
+   <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>
