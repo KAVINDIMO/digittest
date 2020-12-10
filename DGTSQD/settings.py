@@ -169,4 +169,5 @@ STATIC_LOCATION = 'static'
 STATIC_URL = f'https://{AZURE_CUSTOM_DOMAIN}/{STATIC_LOCATION}/'
 
 STATICFILES_STORAGE = 'storages.backends.azure_storage.AzureStorage'
-DEFAULT_FILE_STORAGE = 'mysite.custom_azure.AzureMediaStorage'
+DEFAULT_FILE_STORAGE = 'DGTSQD.custom_azure.AzureMediaStorage'
+
