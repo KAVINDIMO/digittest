@@ -14,6 +14,8 @@ from pathlib import Path
 from django.conf.urls.static import static
 from django.conf import settings
 from decouple import config
+#import django_heroku
+import dj_database_url
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -80,25 +82,25 @@ WSGI_APPLICATION = 'DGTSQD.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
-
-#POSTGRES
 #DATABASES = {
     #'default': {
-        #'ENGINE': 'django.db.backends.postgresql',
-        #'NAME': 'digit',
-        #'USER': 'postgres',
-        #'PASSWORD': 'kavin',
-        #'listen_addresses':'*',
-        #'HOST': '127.0.0.1,52.173.149.254',
-        #'PORT': '5432',
+        #'ENGINE': 'django.db.backends.sqlite3',
+        #'NAME': BASE_DIR / 'db.sqlite3',
     #}
 #}
+
+#POSTGRES
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'digit',
+        'USER': 'postgres',
+        'PASSWORD': 'kavin',
+        'listen_addresses':'*',
+        'HOST': '127.0.0.1,52.173.149.254',
+        'PORT': '5432',
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -182,3 +184,6 @@ STATIC_URL = f'https://{AZURE_CUSTOM_DOMAIN}/{STATIC_LOCATION}/'
 STATICFILES_STORAGE = 'storages.backends.azure_storage.AzureStorage'
 DEFAULT_FILE_STORAGE = 'DGTSQD.custom_azure.AzureMediaStorage'
 
+
+
+#django_heroku.settings(locals())
