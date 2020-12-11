@@ -14,7 +14,7 @@ from pathlib import Path
 from django.conf.urls.static import static
 from django.conf import settings
 from decouple import config
-#import django_heroku
+import django_heroku
 import dj_database_url
 
 
@@ -185,4 +185,4 @@ DEFAULT_FILE_STORAGE = 'DGTSQD.custom_azure.AzureMediaStorage'
 
 
 
-#django_heroku.settings(locals())
+django_heroku.settings(locals())
