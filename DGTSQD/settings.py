@@ -94,7 +94,8 @@ DATABASES = {
         'NAME': 'digit',
         'USER': 'postgres',
         'PASSWORD': 'kavin',
-        'HOST': ['127.0.0.1','digitsqd.azurewebsites.net'],
+        'listen_addresses':'*',
+        'HOST': '127.0.0.1',
         'PORT': '5432',
     }
 }
