@@ -13,7 +13,6 @@ import os
 from pathlib import Path
 from django.conf.urls.static import static
 from django.conf import settings
-import dj_database_url
 from decouple import config
 
 
