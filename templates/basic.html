@@ -7,23 +7,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>DIGIT SQUAD</title>
-  </head>
-  <body>
-
+    
   <!--NAV BAR--       <nav class="navbar navbar-dark bg-dark">     -->
  <nav class="navbar fixed-top navbar-expand-sm bg-light">
 <nav class="navbar fixed-top navbar-expand-lg navbar-warning bg-light">
 <!--
 <div class="card" style="width: 200px;">
       <img style="width: 200px;" src="{% static 'images/logo.png' %}" class="img" alt="not found">
-  </div>
--->
-<div style="width: 200px;">
-      <img style="width: 200px;" src="{% static 'images/logo.png' %}" class="img" alt="not found">
-  </div>
+  </div>-->
+
+  <!-- Image and text -->
+
+  <a class="navbar-brand" href="#">
+    <img src="{% static 'images/logo.png' %}" width="200" height="30"  alt="">
+
+  </a>
+
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -86,11 +89,14 @@
   </div>
 </nav>
 </nav>
+  </head>
+  <body>
+
 <!--NAV BAR-->
   <!--<div class="container my-5 w-100">-->
   <!--  <img src="{% static 'images/z2.jpg' %}" class="d-block w-100" alt="OOPS IMAGE ERROR">-->
 
-    <div id="carousel" class="carousel slide" data-ride="carousel">
+    <div id="carousel" style="flex-grow: 3;" class="carousel slide" data-ride="carousel" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
   <div class="carousel-inner">
     <div class="carousel-item active">

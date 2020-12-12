@@ -145,8 +145,8 @@ STATICFILES_DIRS = BASE_DIR / "static",
 
 #STATICFILES_STORAGE  = 'whitenoise.storage.CompressesManifestStaticFileStorage'
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+#MEDIA_URL = '/media/'
+#MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
 #login/logout
 
@@ -179,6 +179,19 @@ AZURE_CONTAINER = 'static'
 
 STATIC_LOCATION = 'static'
 STATIC_URL = f'https://{AZURE_CUSTOM_DOMAIN}/{STATIC_LOCATION}/'
+
+#media
+STATICFILES_DIRS =  BASE_DIR / "static",
+
+AZURE_ACCOUNT_NAME = 'dgtsqd'
+AZURE_ACCOUNT_KEY = 'ife/0ulHHHuns7puU2KTY06qkO6v2yVfLxW1eeQR/bMzh+tfDMsN86hJbsTRuT26dxJMnQuS73n5ffjzchomlA=='
+AZURE_CUSTOM_DOMAIN = f'{AZURE_ACCOUNT_NAME}.blob.core.windows.net'
+AZURE_LOCATION = 'media'
+AZURE_CONTAINER = 'static'
+
+MEDIA_LOCATION = 'media'
+MEDIA_URL = f'https://{AZURE_CUSTOM_DOMAIN}/{MEDIA_LOCATION}/'
+
 
 STATICFILES_STORAGE = 'storages.backends.azure_storage.AzureStorage'
 DEFAULT_FILE_STORAGE = 'DGTSQD.custom_azure.AzureMediaStorage'
