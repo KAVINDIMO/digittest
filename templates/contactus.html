@@ -33,29 +33,29 @@
   <div class="collapse navbar-collapse" id="navbarText">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" style="color: #ff4500" href="/basic"><span class="material-icons">home</span>HOME<!--<span class="sr-only">(current)</span>--></a>
+        <a class="nav-link" style="color: #000000" href="/basic"><div class="hello"><span class="material-icons">home</span>HOME</div><!--<span class="sr-only">(current)</span>--></a>
       </li>
       <li class="nav-item ">
-        <a class="nav-link" href="/newspost"><span class="material-icons">article</span>TECH BYTES</a>
+        <a class="nav-link" style="color: #000000" href="/newspost"><div class="hello"><span class="material-icons">article</span>TECH BYTES</div></a>
       </li>
       <li class="nav-item ">
-        <a class="nav-link" href="/achievements"><span class="material-icons">emoji_events</span>ACHIEVEMENTS</a>
+        <a class="nav-link" style="color: #000000" href="/achievements"><div class="hello"><span class="material-icons">emoji_events</span>ACHIEVEMENTS</div></a>
       </li>
       <li class="nav-item ">
-        <a class="nav-link" href="/project"><span class="material-icons">star</span>PROJECTS</a>
+        <a class="nav-link" style="color: #000000" href="/project"><div class="hello"><span class="material-icons">star</span>PROJECTS</div></a>
       </li>
       <li class="nav-item ">
-        <a class="nav-link" href="/events"><span class="material-icons">school</span>EVENTS</a>
+        <a class="nav-link" style="color: #000000" href="/events"><div class="hello"><span class="material-icons">school</span>EVENTS</div></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/tmembers"><span class="material-icons">engineering</span>TOP SQUAD MEMBERS</a>
+        <a class="nav-link" style="color: #000000" href="/tmembers"><div class="hello"><span class="material-icons">engineering</span>TOP SQUAD MEMBERS</div></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/news"><span class="material-icons">text_snippet</span>NEWS</a>
+        <a class="nav-link" style="color: #000000" href="/news"><div class="hello"><span class="material-icons">text_snippet</span>NEWS</div></a>
       </li>
       {% if user.is_authenticated %}
         <li class="nav-item">
-        <a class="nav-link" href="/comment"><span class="material-icons">message</span>REVIEW</a>
+        <a class="nav-link" style="color: #000000" href="/comment"><div class="hello"><span class="material-icons">message</span>REVIEW</div></a>
       </li>
       <div style="border-radius:50%" class="btn-group">
      <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -68,14 +68,14 @@
               </div>
                 
         <li class="nav-item">
-        <a class="nav-link" href="/logout"><span class="material-icons">lock_open</span>LOGOUT</a>
+        <a class="nav-link" style="color: #000000" href="/logout"><div class="hello"><span class="material-icons">lock_open</span>LOGOUT</div></a>
       </li>
       {% else %}
      &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
 
       </li>
        <li class="nav-item">
-        <a class="nav-link" href="/login"><span class="material-icons">login</span>SIGNUP</a>
+        <a class="nav-link" style="color: #000000" href="/login"><div class="hello"><span class="material-icons">login</span>SIGNUP</div></a>
       </li>
       {% endif %}
     
@@ -123,24 +123,24 @@ YOUTUBE</a></a></b>  &emsp;&emsp;&emsp;&emsp;&emsp;
   <div class="collapse navbar-collapse" id="navbarText">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="/basic"><span class="material-icons">home</span>HOME</a>
+        <a class="nav-link" style="color: #000000" href="/basic"><div class="hello"><span class="material-icons">home</span>HOME</div></a>
       </li>
       <li class="nav-item ">
-        <a class="nav-link" href="/members"><span class="material-icons">emoji_people</span>MEMBERS</a>
+        <a class="nav-link" style="color: #000000" href="/members"><div class="hello"><span class="material-icons">emoji_people</span>MEMBERS</div></a>
       </li>
       <li class="nav-item ">
-        <a class="nav-link" href="/pybot"><span class="material-icons">location_searching</span>SQUAD SEARCH</a>
+        <a class="nav-link" style="color: #000000" href="/pybot"><div class="hello"><span class="material-icons">location_searching</span>SQUAD SEARCH</div></a>
       </li>
       <li class="nav-item ">
-        <a class="nav-link" href="/aboutus"><span class="material-icons">mail</span>ABOUT US</a>
+        <a class="nav-link" style="color: #000000" href="/aboutus"><div class="hello"><span class="material-icons">mail</span>ABOUT US</div></a>
       </li>
       <li class="nav-item ">
-        <a class="nav-link" style="color: #ff4500" href="/contactus"><span class="material-icons">phonelink_ring</span>CONTACT US</a>
+        <a class="nav-link" style="color: #ff4500" href="/contactus"><div class="hello"><span class="material-icons">phonelink_ring</span>CONTACT US</div></a>
       </li>
-      {% if request.user.is_superuser %}
+      <!--{% if request.user.is_superuser %}
           &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
           &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-          <!--<li class="nav-item">
+         <li class="nav-item">
           <a class="nav-link" href="/upload"><span class="material-icons">question_answer</span>BYTES UPLOAD</a>
           </li>
           <li class="nav-item">
@@ -155,24 +155,36 @@ YOUTUBE</a></a></b>  &emsp;&emsp;&emsp;&emsp;&emsp;
           <li class="nav-item">
           <a class="nav-link" href="/reportnews"><span class="material-icons">question_answer</span>ADD NEWS</a>
           </li>-->
-           
-<div style="border-radius:50%" class="btn-group">
-     <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      ADMIN UPLOAD PANEL
-     </button>
-      <div class="dropdown-menu">
-               <a class="nav-link" href="/upload"><span class="material-icons">question_answer</span>BYTES UPLOAD</a>
-              <div class="dropdown-divider"></div>
-               <a class="nav-link" href="/uploadevents"><span class="material-icons">question_answer</span>EVENTS UPLOAD</a>
-              <div class="dropdown-divider"></div>
-              <a class="nav-link" href="/uploadproject"><span class="material-icons">question_answer</span>PROJECT UPLOAD</a>
-              <div class="dropdown-divider"></div>
-              <a class="nav-link" href="/addachievements"><span class="material-icons">question_answer</span>ACHIEVEMENTS UPLOAD</a>
-              <div class="dropdown-divider"></div>
-              <a class="nav-link" href="/reportnews"><span class="material-icons">question_answer</span>ADD NEWS</a>
-              </div>
+           <!--
+       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  ADMIN UPLOADS
+</button>
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">UPLOADS</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+         <a class="nav-link" href="/upload"><span class="material-icons">question_answer</span>BYTES UPLOAD</a>
+         <a class="nav-link" href="/uploadevents"><span class="material-icons">question_answer</span>EVENTS UPLOAD</a>
+         <a class="nav-link" href="/uploadproject"><span class="material-icons">question_answer</span>PROJECT UPLOAD</a>
+         <a class="nav-link" href="/reportnews"><span class="material-icons">question_answer</span>ADD NEWS</a>
+         <a class="nav-link" href="/addachievements"><span class="material-icons">question_answer</span>ACHIEVEMENTS UPLOAD</a
+      ></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
       {% else %}
-      {% endif %}
+      {% endif %}-->
     </ul>
     <span class="navbar-text">
      <!--text here-->
@@ -215,6 +227,9 @@ YOUTUBE</a></a></b>  &emsp;&emsp;&emsp;&emsp;&emsp;
     border-radius:0px;
 
    } 
+   .hello:hover{
+    color:red;
+}
 </style>
    <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
