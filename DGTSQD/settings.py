@@ -137,16 +137,15 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
+
 STATIC_URL = '/static/'
 #STATICFILES_DIRS = [
     #os.path.join(BASE_DIR,'static')
 #]
 STATICFILES_DIRS = BASE_DIR / "static",
 
-#STATICFILES_STORAGE  = 'whitenoise.storage.CompressesManifestStaticFileStorage'
-
-#MEDIA_URL = '/media/'
-#MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
 #login/logout
 
@@ -155,40 +154,25 @@ LOGOUT_REDIRECT_URL = "/basic"
 
 AUTH_PROFILE_MODULE = 'main.UserProfile'
 
-#azure storages
-#DEFAULT_FILE_STORAGE = 'storages.backends.azure_storage.AzureStorage'
-#STATICFILES_STORAGE = 'storages.backends.azure_storage.AzureStorage'
 
 STATIC_LOCATION = "static"
 MEDIA_LOCATION = "media"
 
-#AZURE_ACCOUNT_NAME = "dgtsqd"
-#AZURE_CUSTOM_DOMAIN = f'{AZURE_ACCOUNT_NAME}.blob.core.windows.net'
-#AZURE_LOCATION=f'{AZURE_ACCOUNT_NAME}.blob.core.windows.net'
-#STATIC_URL = f'https://{AZURE_CUSTOM_DOMAIN}/{STATIC_LOCATION}/'
-#MEDIA_URL = f'https://{AZURE_CUSTOM_DOMAIN}/{MEDIA_LOCATION}/'
-
-#new
 STATICFILES_DIRS =  BASE_DIR / "static",
+MEDIAFILES_DIRS =  BASE_DIR / "media",
 
-AZURE_ACCOUNT_NAME = 'dgtsqd'
-AZURE_ACCOUNT_KEY = 'ife/0ulHHHuns7puU2KTY06qkO6v2yVfLxW1eeQR/bMzh+tfDMsN86hJbsTRuT26dxJMnQuS73n5ffjzchomlA=='
+
+AZURE_ACCOUNT_NAME = 'dgtsqdsite'
+AZURE_ACCOUNT_KEY = 'IveFc2edxtaj4NUNiJbtbGPHoHMmITB9osje13Phb6ykqUOvunW+Om+it4tfwn0APfQvLIm8mljgwhmIRCap8w=='
 AZURE_CUSTOM_DOMAIN = f'{AZURE_ACCOUNT_NAME}.blob.core.windows.net'
 AZURE_LOCATION = 'static'
 AZURE_CONTAINER = 'static'
+#AZURE_LOCATION = 'media'
+#AZURE_CONTAINER = 'media'
+
 
 STATIC_LOCATION = 'static'
 STATIC_URL = f'https://{AZURE_CUSTOM_DOMAIN}/{STATIC_LOCATION}/'
-
-#media
-STATICFILES_DIRS =  BASE_DIR / "static",
-
-AZURE_ACCOUNT_NAME = 'dgtsqd'
-AZURE_ACCOUNT_KEY = 'ife/0ulHHHuns7puU2KTY06qkO6v2yVfLxW1eeQR/bMzh+tfDMsN86hJbsTRuT26dxJMnQuS73n5ffjzchomlA=='
-AZURE_CUSTOM_DOMAIN = f'{AZURE_ACCOUNT_NAME}.blob.core.windows.net'
-AZURE_LOCATION = 'media'
-AZURE_CONTAINER = 'static'
-
 MEDIA_LOCATION = 'media'
 MEDIA_URL = f'https://{AZURE_CUSTOM_DOMAIN}/{MEDIA_LOCATION}/'
 
