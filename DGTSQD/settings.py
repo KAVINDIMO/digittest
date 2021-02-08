@@ -83,6 +83,12 @@ TEMPLATES = [
 
 SITE_ID = 1
 
+
+ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_USERNAME_REQUIRED = False
+ACCOUNT_AUTHENTICATION_METHOD = 'email'
+
 # Provider specific settings
 SOCIALACCOUNT_PROVIDERS = {
     'google': {
@@ -96,6 +102,8 @@ SOCIALACCOUNT_PROVIDERS = {
         }
     }
 }
+
+
 
 
 WSGI_APPLICATION = 'DGTSQD.wsgi.application'
