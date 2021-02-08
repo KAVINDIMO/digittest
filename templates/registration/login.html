@@ -1,40 +1,23 @@
 <!DOCTYPE html>
 {% load static %}
+{% load socialaccount %}
 <html>
  <!--font awesome-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
 
 <body>
 <!--page-->
-<div id="fm">
-<form method="post" id="log" >
-{% csrf_token %}
-<div>
-    <title>LOGIN</title>
-<h1 style="color:black;">USER LOGIN</h1>
-</div>
-<div  id="box"class="input-group-append mb-3">
-    <span class="input-group-text" ><i id="icon1"class="fas fa-user"></i></span>
-    <!--<input id="box" type="text" placeholder="name">-->
-    {{form.username}}
-</div>
-<div class="input-group mb-3">
-    <div id="box" class="input-group-append">
-        <span class="input-group-text"><i class="fas fa-key"></i></span>
-        <!--<input id="box2" type="password" placeholder="enter the password">-->
-        {{form.password}}
-    </div>
 
-</div>
-    <div id="box4"class="d-flex justify-content-center mt-3 login_container">
-        <input class="btn login_btn" type="submit" value="login">
-    </div>
-<br><br>
-<div id="box3">
-<span>DONT HAVE AN ACCOUNT?<br> CREATE NEW ONE HERE-><a href="/register">click here</a></span>
-</div>
-</form>
-</div>
+  <h1>My Google Login Project</h1>
+  {% if user.is_authenticated %}
+  <p>Welcome, {{ user.username }} !</p>
+ 
+  {% else %}
+  <h1>My Google Login Project</h1>
+  <a href="{% provider_login_url 'google' %}">Login with Google</a>
+  {% endif %}
+</body>
+
 
  
 <style type="text/css">
