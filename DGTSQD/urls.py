@@ -29,6 +29,7 @@ from main.views import viewprofile
 from main.views import viewprofile
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('accounts/', include('allauth.urls')),
     path('',include("main.urls")),
     path('basic/',include("main.urls")),
     path('comment/',include("main.urls")),
@@ -40,6 +41,7 @@ urlpatterns = [
     path('viewprofile/',include("main.urls")),
     path('dispprofile/',include("main.urls")),
     path('viewprofile/<tager>/',include("main.urls")),
+    path('accounts/', include('allauth.urls')),
 ]
 urlpatterns = urlpatterns + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
 urlpatterns = urlpatterns + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

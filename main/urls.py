@@ -1,5 +1,8 @@
 from django.urls import path
 from . import views
+from django.contrib import admin
+from django.urls import path, include
+
 
 urlpatterns=[
 path("",views.basic,name="basic"),
@@ -36,4 +39,5 @@ path('dispprofile/',views.DispProfile,name="dispprofile"),
 path('reportnews/',views.reportupload,name="reportnews"),
 path('viewinfo/<tager>/',views.viewinfo,name="viewinfo"),
 path('newspost/viewinfo/<tager>/',views.viewinfo,name="viewinfo"),
+
 ]

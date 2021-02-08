@@ -16,4 +16,5 @@ azure-storage_common==2.1.0
 azure-common==1.1.5
 azure-storage-blob==2.1.0
 psycopg2-binary==2.8.6
+django-allauth==0.44.0
 

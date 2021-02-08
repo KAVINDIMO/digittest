@@ -31,7 +31,7 @@ SECRET_KEY = 'qw4&)y+1=d8&o))=@*@zk2n(e=u(b=p3&o)16^cbq!kyj4dr_+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','digitsqd.azurewebsites.net',"*"]
+ALLOWED_HOSTS = ['127.0.0.1',"*"]
 
 
 # Application definition
@@ -43,8 +43,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
     'main',
     'storages',
+    'allauth',  
+    'allauth.account', 
+    'allauth.socialaccount',  
+    'allauth.socialaccount.providers.google',
 ]
 
 MIDDLEWARE = [
@@ -76,6 +81,23 @@ TEMPLATES = [
     },
 ]
 
+SITE_ID = 1
+
+# Provider specific settings
+SOCIALACCOUNT_PROVIDERS = {
+    'google': {
+        # For each OAuth based provider, either add a ``SocialApp``
+        # (``socialaccount`` app) containing the required client
+        # credentials, or list them here:
+        'APP': {
+            'client_id': '576119017330-jpt7fm9m1k2476fd8aadl6lrr4smstd0.apps.googleusercontent.com',
+            'secret': '5TOAp4zn8H8bwmcWWibZhNBu',
+            'key': ''
+        }
+    }
+}
+
+
 WSGI_APPLICATION = 'DGTSQD.wsgi.application'
 
 
@@ -89,7 +111,7 @@ WSGI_APPLICATION = 'DGTSQD.wsgi.application'
     #}
 #}
 
-POSTGRES
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -118,6 +140,11 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+AUTHENTICATION_BACKENDS = (
+ 'django.contrib.auth.backends.ModelBackend',
+ 'allauth.account.auth_backends.AuthenticationBackend',
+ )
 
 
 # Internationalization
