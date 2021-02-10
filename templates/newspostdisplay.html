@@ -8,13 +8,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!--google icons-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <!--font awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>TECH BYTES</title>
-  </head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<script>
+$(document).ready(function(){
+  $("body").click(function(){
+    $(".grid-container").();
+  });
+});
+</script>
+  
+</head>
   <body>
    <link rel='stylesheet'  href="{% static 'CSS\master.css' %}">
  <nav class="navbar fixed-top navbar-dark bg-light">
@@ -87,7 +99,7 @@
 <br><br>
 
   {% for i in obj reversed %}
-    <div class="grid-container">
+    <div id="ani" class="grid-container w3-animate-left">
     <form  action="viewinfo/<tager>">
       {% csrf_token %}
       <img src="{{i.img.url}}" class="im" alt="not found">
@@ -195,7 +207,14 @@
     grid-column-gap:50px;
     padding-left: 350px;
     margin-left:7%;
+ 
+    
    }
+
+   #ani:hover{
+    animation-timing-function: ease-in;
+  }
+ 
 
    .im{
      size:300px;
@@ -288,6 +307,10 @@
      font-size:130%;
      color:#FFFFFF;
     }
+   }
+
+   #navbarText{
+     font-size:12px;
    }
 </style>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
