@@ -94,7 +94,7 @@
     <li data-target="#demo" data-slide-to="2"></li>
     <li data-target="#demo" data-slide-to="3"></li>
   </ul>
-  <div class="carousel-inner">
+<div class="carousel-inner">
     <div class="carousel-item active">
       <img src="{% static 'images/z2.jpg' %}" class="responsive" sizes="(max-width:320px)280px,(max-width:480px)440px,800px" alt="OOPS IMAGE ERROR">
       <div class="carousel-caption">
@@ -102,7 +102,7 @@
         <p>TECHPOST 1 DISCRIPTION</p>
       </div>   
     </div>
-    <div class="carousel-item">
+<div class="carousel-item">
       <img src="{% static 'images/ps5.jpg' %}" class="responsive" sizes="(max-width:320px)280px,(max-width:480px)440px,800px" alt="OOPS IMAGE ERROR">
       <div class="carousel-caption">
         <h3>TECH POST 2</h3>
@@ -170,6 +170,57 @@
 </div>
 <br><br><br>
 
+ <h1 style="text-align:center;">DOMAIN WE WORK ON</h1>
+    <div class="containers">
+        <div class="cardss">
+            <div class="face face1">
+                <div class="content">
+                    <img src="https://github.com/Jhonierpc/WebDevelopment/blob/master/CSS%20Card%20Hover%20Effects/img/design_128.png?raw=true">
+                    <h3>Design</h3>
+                </div>
+            </div>
+            <div class="face face2">
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cum cumque minus iste veritatis provident at.</p>
+                        <a href="#">Read More</a>
+                </div>
+            </div>
+        </div>
+        <div class="cardss">
+            <div class="face face1">
+                <div class="content">
+                    <img src="https://github.com/Jhonierpc/WebDevelopment/blob/master/CSS%20Card%20Hover%20Effects/img/code_128.png?raw=true">
+                    <h3>Code</h3>
+                </div>
+            </div>
+            <div class="face face2">
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cum cumque minus iste veritatis provident at.</p>
+                        <a href="#">Read More</a>
+                </div>
+            </div>
+        </div>
+        <div class="cardss">
+            <div class="face face1">
+                <div class="content">
+                    <img src="https://github.com/Jhonierpc/WebDevelopment/blob/master/CSS%20Card%20Hover%20Effects/img/launch_128.png?raw=true">
+                    <h3>Launch</h3>
+                </div>
+            </div>
+            <div class="face face2">
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cum cumque minus iste veritatis provident at.</p>
+                        <a href="#">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<h1 style="text-align:center;">ABOUT US</h1>
+<a style="text-align:center;font-size:100%">The club was formed as a group of premier technology enthusiasts in VIT, who practically live and sense all things technology. Not only to learn how to manufacture and work in the industry of tech but the club would practically want to see people use technology in the best way possible. Getting the most out of technology in the right way is our vision.</a>
+
+
  <div class="controls">
   
     <div><button onclick="toggleShape()">Toggle Shape</button></div>
@@ -178,7 +229,7 @@
   <div id="container">
     <div id="stage">
       <div id="shape" class="cube backfaces">
-        <div class="plane one">  <img  id="imge" src="{% static "images/qw4.jpg"%}" alt="name"></div>
+        <div id="text" class="plane one">:)</div>
         <div id="text" class="plane two">JOIN</div>
         <div id="text" class="plane three">DIGIT</div>
         <div id="text" class="plane four">SQUAD</div>
@@ -195,13 +246,13 @@
   </div>
 
 <div class="foot">
-<div class="mail">
+<div class="mail" >
 <p class="font-weight-bold">mail us @<a href="www.gmail.com">www.gmail.com</a></p>
 <p> FOLLOW US ON :</p>
-<a href="https://www.facebook.com/digitsquadvitv/"><i  class="fa fa-facebook mx-auto  pr-5" style="font-size:70px;color:#00AAFF"  ></i></a>
-<a href="https://www.instagram.com/digitsquad_vit/"><i class="fa fa-instagram mx-auto" style="font-size:70px;color:#EEAAAA" ></i></a>
+<a href="https://www.facebook.com/digitsquadvitv/"><i  class="fa fa-facebook " style="font-size:30px;color:#00AAFF"  ></i></a>
+<a href="https://www.instagram.com/digitsquad_vit/"><i class="fa fa-instagram  " style="font-size:30px;color:#EEAAAA" ></i></a>
 <br><br>
-<p id="cop" class="font-weight-bold mx-auto">©2021 CREATED AND MANAGED BY :DIGITSQUAD VIT</p>
+<p id="cop" class="font-weight-bold ">©2021 CREATED AND MANAGED BY :DIGITSQUAD VIT</p>
 </div>
 </div>
 <nav class="navbar navbar-expand-sm bg-light">
@@ -283,7 +334,8 @@
     padding-bottom:20px;
   }
   #cop{
-    padding-left:100px;
+  
+    padding-right:300px;
   }
   #text{
     font-size:30px;
@@ -295,12 +347,17 @@
   .foot{
     width:100%;
     height:200px;
+    padding-right:30px;
+    padding-left:330px;
     background:linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+    -webkit-perspective: 800; /* For compatibility with iPhone 3.0, we leave off the units here */
+    -webkit-perspective-origin: 50% 225px;
   }
   .mail{
      align-item:center;
      justify-content:center;
-     margin-left:30%;
+     margin-left:20%;
+     padding-right:30px;
   }
 
   body {
@@ -567,6 +624,124 @@
   padding-left: 50px;
   
 }
+
+ #cop{
+  
+    
+  }
+  #text{
+    font-size:10px;
+    font-family: 'Lucida Grande', Verdana, Arial;
+   
+
+  }
+
+  .foot{
+    width:100px;
+    height:auto;
+    left:100%;
+     padding-right:200px;
+ 
+    background:linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+   
+  }
+  .mail{
+      width:100px;
+     padding-right:200px;
+  
+  }
+
+  .containers{
+    width: 25%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.containers .cardss{
+    position: relative;
+    cursor: pointer;
+}
+
+.containers .cardss .face{
+    width: 300px;
+    height: 200px;
+    transition: 0.5s;
+}
+
+.containers .cardss .face.face1{
+    position: relative;
+    background: #000;
+    border:5px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+}
+
+.containers .cardss:hover .face.face1{
+    background: linear-gradient(to right, #ff9900 35%, #FFFFFF 94%);
+    transform: translateY(0);
+}
+
+.containers .cardss .face.face1 .content{
+    opacity: 0.2;
+    transition: 0.5s;
+}
+
+.containers .cardss:hover .face.face1 .content{
+    opacity: 1;
+}
+
+.containers .cardss .face.face1 .content img{
+    max-width: 100px;
+}
+
+.containers .cardss .face.face1 .content h3{
+    margin: 10px 0 0;
+    padding: 0;
+    color: red;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.containers .cardss .face.face2{
+    position: relative;
+    background: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    transform: translateY(-100px);
+}
+
+.containers .cardss:hover .face.face2{
+    transform: translateY(0);
+}
+
+.containers .cardss .face.face2 .content p{
+    margin: 0;
+    padding: 0;
+}
+
+.containers .cardss .face.face2 .content a{
+    margin: 15px 0 0;
+    display:  inline-block;
+    text-decoration: none;
+    font-weight: 900;
+    color: #333;
+    padding: 5px;
+    border: 1px solid #333;
+}
+
+.containers .cardss .face.face2 .content a:hover{
+    background: #FF7788;
+    color: #AABBCC;
+}
  }
 
 // Medium devices (tablets, less than 992px)
@@ -607,7 +782,9 @@
   grid-column-gap:50px;
   padding-left: 350px;
   
-} }
+} 
+
+}
 
 
 
@@ -664,6 +841,105 @@
   transform: translate(-50%, -50%);
   margin-right:30rem;
   font-family:cursive;
+}
+#navbarText{
+font-size:12px;
+}
+
+/*CARD */
+
+.containers{
+    width: 50%;
+    margin-left:20%;
+    position: relative;
+    display: flex;
+    margin-right:20px;
+    padding:20px;
+    justify-contents:space-evenly;
+}
+
+.containers .cardss{
+    position: relative;
+    cursor: pointer;
+}
+
+.containers .cardss .face{
+    width: 300px;
+    height: 200px;
+    transition: 0.5s;
+}
+
+.containers .cardss .face.face1{
+    position: relative;
+    background: #000;
+    border:5px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+}
+
+.containers .cardss:hover .face.face1{
+    background: linear-gradient(to right, #ff9900 35%, #FFFFFF 94%);
+    transform: translateY(0);
+}
+
+.containers .cardss .face.face1 .content{
+    opacity: 0.2;
+    transition: 0.5s;
+}
+
+.containers .cardss:hover .face.face1 .content{
+    opacity: 1;
+}
+
+.containers .cardss .face.face1 .content img{
+    max-width: 100px;
+}
+
+.containers .cardss .face.face1 .content h3{
+    margin: 10px 0 0;
+    padding: 0;
+    color: red;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.containers .cardss .face.face2{
+    position: relative;
+    background: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    transform: translateY(-100px);
+}
+
+.containers .cardss:hover .face.face2{
+    transform: translateY(0);
+}
+
+.containers .cardss .face.face2 .content p{
+    margin: 0;
+    padding: 0;
+}
+
+.containers .cardss .face.face2 .content a{
+    margin: 15px 0 0;
+    display:  inline-block;
+    text-decoration: none;
+    font-weight: 900;
+    color: #333;
+    padding: 5px;
+    border: 1px solid #333;
+}
+
+.containers .cardss .face.face2 .content a:hover{
+    background: #FF7788;
+    color: #AABBCC;
 }
 </style>
 
