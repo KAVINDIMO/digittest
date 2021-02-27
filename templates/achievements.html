@@ -127,7 +127,7 @@
 {% for i in obj reversed %}
   <div class="card" >
   <img src="{{i.img.url}}" class="im" alt="not found">
-  <h5 class=" title" style="color: #FFFFFF">{{i.info}}</h5>
+  <a style="color:#FFFFFF"><b>{{i.info}}</b></a>
   </div>
 {% endfor %}
 
@@ -235,10 +235,6 @@
    .hello:hover{
     color:red;
 }
-   <style type="text/css">
-   body 
-   { background: yellow !important; 
-   }
    .card{
     padding-top: 1%;
     padding-right: 1%;
@@ -248,7 +244,8 @@
     margin-right:0%;
     margin-top:0%;
     margin-bottom:0%;
-    background-color:#7F7F89;
+    /*background-color:#7F7F89;*/
+    background:rgba(0, 0, 32, 0.54);
     border-radius:4%;
    } 
    .im{
@@ -259,24 +256,106 @@
    .im:hover {
   transform: scale(1.1);
 }
+/*
 @media (max-width: 767.98px)
 {
   .card{
-    width:100%;
-    padding-top: 3%;
-    padding-right: 3%;
-    padding-bottom: 3%;
-    padding-left: 3%;
-    margin-left:5%;
+    padding-top: 1%;
+    padding-right: 1%;
+    padding-bottom: 2%;
+    padding-left: 1%;
+    margin-left:0%;
     margin-right:0%;
-    margin-up:0%;
-    margin-down:0%;
+    margin-top:2%;
+    margin-bottom:2%;
     background-color:#7F7F89;
     border-radius:4%;
    } 
    .im{
-     size:50%;
-     height:50%;
+     width:350px;
+     height:200px;
+     margin-top:3%;
+     margin left:20%;
+     transition: transform .2s;
+   }
+   .im:hover {
+  transform: scale(1.1);
+}
+}
+@media (max-width: 991.98px)
+{
+  .card{
+    padding-top: 1%;
+    padding-right: 1%;
+    padding-bottom: 2%;
+    padding-left: 1%;
+    margin-left:0%;
+    margin-right:0%;
+    margin-top:2%;
+    margin-bottom:2%;
+    background-color:#7F7F89;
+    border-radius:4%;
+   } 
+   .im{
+     width:350px;
+     height:200px;
+     margin-top:3%;
+     margin left:20%;
+     transition: transform .2s;
+   }
+   .im:hover {
+  transform: scale(1.1);
+}
+}
+@media (max-width: 1199.98px)
+{
+  .card{
+    padding-top: 1%;
+    padding-right: 100%;
+    padding-bottom: 2%;
+    padding-left: 1%;
+    margin-left:0%;
+    margin-right:0%;
+    margin-top:2%;
+    margin-bottom:2%;
+    background-color:#7F7F89;
+    border-radius:4%;
+   } 
+   .im{
+     width:350px;
+     height:200px;
+     margin-top:3%;
+     margin left:20%;
+     transition: transform .2s;
+   }
+   .im:hover 
+   {
+  transform: scale(1.1);
+}
+}
+*/
+@media (max-width: 767.98px)
+{
+  .card{
+    width:100%;
+    grid-template-columns: auto auto auto auto;
+  justify-content: space-evenly;
+    padding-top: 5%;
+    padding-right: 0%;
+    padding-bottom: 3%;
+    padding-left: 3%;
+    margin-left:5%;
+    margin-right:0%;
+    margin-top:0%;
+    margin-bottom:30%;
+    /*background-color:#7F7F89;*/
+    background:rgba(0, 0, 32, 0.54);
+    border-radius:4%;
+   } 
+   .im{
+     width:325px;
+     height:250px;
+     padding left:20%;
      transition: transform .2s;
    }
    .im:hover {
@@ -287,20 +366,24 @@
 {
   .card{
     width:90%;
-    padding-top: 3%;
-    padding-right: 3%;
+    grid-template-columns: auto auto auto auto;
+  justify-content: space-evenly;
+    padding-top: 5%;
+    padding-right: 0%;
     padding-bottom: 3%;
     padding-left: 3%;
     margin-left:5%;
     margin-right:0%;
     margin-top:2%;
-    margin-bottom:2%;
-    background-color:#7F7F89;
+    margin-bottom:30%;
+    /*background-color:#7F7F89;*/
+    background:rgba(0, 0, 32, 0.54);
     border-radius:4%;
    } 
    .im{
-     size:50%;
-     height:50%;
+     width:325px;
+     height:250px;
+     padding left:20%;
      transition: transform .2s;
    }
    .im:hover {
@@ -311,20 +394,24 @@
 {
   .card{
     width:90%;
-    padding-top: 3%;
-    padding-right: 3%;
+    grid-template-columns: auto auto auto auto;
+  justify-content: space-evenly;
+    padding-top: 5%;
+    padding-right: 0%;
     padding-bottom: 3%;
     padding-left: 3%;
     margin-left:5%;
     margin-right:0%;
     margin-top:2%;
-    margin-bottom:2%;
-    background-color:#7F7F89;
+    margin-bottom:30%;
+    /*background-color:#7F7F89;*/
+    background:rgba(0, 0, 32, 0.54);
     border-radius:4%;
    } 
    .im{
-     size:50%;
-     height:50%;
+     width:325px;
+     height:250px;
+     padding left:20%;
      transition: transform .2s;
    }
    .im:hover {

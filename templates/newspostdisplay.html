@@ -8,25 +8,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!--google icons-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <!--font awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>TECH BYTES</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
-<script>
-$(document).ready(function(){
-  $("body").click(function(){
-    $(".grid-container").();
-  });
-});
-</script>
-  
-</head>
+  </head>
   <body>
    <link rel='stylesheet'  href="{% static 'CSS\master.css' %}">
  <nav class="navbar fixed-top navbar-dark bg-light">
@@ -99,7 +87,7 @@ $(document).ready(function(){
 <br><br>
 
   {% for i in obj reversed %}
-    <div id="ani" class="grid-container w3-animate-left">
+    <div class="grid-container">
     <form  action="viewinfo/<tager>">
       {% csrf_token %}
       <img src="{{i.img.url}}" class="im" alt="not found">
@@ -206,15 +194,8 @@ $(document).ready(function(){
     margin-bottom:20px;
     grid-column-gap:50px;
     padding-left: 350px;
-    margin-left:7%;
- 
-    
+    margin-left:5%;
    }
-
-   #ani:hover{
-    animation-timing-function: ease-in;
-  }
- 
 
    .im{
      size:300px;
@@ -225,7 +206,8 @@ $(document).ready(function(){
   transform: scale(1.05);
   border:10px solid black;
 }
-@media(max-width:767.98px){
+@media(max-width:767.98px)
+{
 .grid-container
    {
     width:300px;
@@ -235,12 +217,13 @@ $(document).ready(function(){
     grid-column-gap:5%;
     padding-left: 120px;
     margin-bottom:20px;
-    margin-left:7%;
+    margin-left:10%;
+    margin-right:10%;
    }
    .im{
      width:300px;
      height:300px;
-     padding-left:20px;
+     padding-left:0px;
      transition: transform .2s;
    }
    #head{
@@ -268,17 +251,14 @@ $(document).ready(function(){
     padding: 5px;
   }
   .btnm{
-    width:290px;
+    width:305px;
     height:30px;
-     background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
+     background: #FFFFFF;
      color:blue;
     margin-right:180px;
-    margin-left:2%;
+    margin-left:0%;
   }
-  .btnm:hover{
-    font-style:underline;
-    transform: scale(1.15);
-  }
+  
   .font
   {
     font-size:100%;
@@ -286,31 +266,136 @@ $(document).ready(function(){
   }
   @media (max-width: 767.98px)
    {
+    /*{
+    width:300px;
+    grid-template-columns: auto;
+    justify-content: space-evenly;
+    grid-row-gap: 40px;
+    grid-column-gap:5%;
+    padding-left: 120px;
+    margin-bottom:20px;
+    margin-left:7%;
+   }*/
+   .grid-container
+   {
+    width:300px;
+    grid-template-columns: auto;
+    justify-content: space-evenly;
+    grid-row-gap: 40px;
+    grid-column-gap:5%;
+    padding-left: 0%;
+    margin-bottom:20px;
+    margin-left:15%;
+    margin-right:10%;
+   }
+   .im{
+     width:300px;
+     height:300px;
+     padding-left:0px;
+     transition: transform .2s;
+   }
     .font
     {
      font-size:50%;
      color:#FFFFFF;
     }
+    .btnm{
+    width:280px;
+    height:30px;
+     background: #FFFFFF;
+     color:blue;
+    margin-right:140px;
+    margin-left:4%;
+  }
    }
    @media (max-width: 991.98px)
    {
+    /*{
+    width:300px;
+    grid-template-columns: auto;
+    justify-content: space-evenly;
+    grid-row-gap: 40px;
+    grid-column-gap:5%;
+    padding-left: 120px;
+    margin-bottom:20px;
+    margin-left:7%;
+   }*/
+   .grid-container
+   {
+    width:300px;
+    grid-template-columns: auto;
+    justify-content: space-evenly;
+    grid-row-gap: 40px;
+    grid-column-gap:5%;
+    padding-left: 0%;
+    margin-bottom:20px;
+    margin-left:15%;
+    margin-right:10%;
+   }
+   .im{
+     width:300px;
+     height:300px;
+     padding-left:0px;
+     transition: transform .2s;
+   }
     .font
     {
      font-size:40%;
      color:#FFFFFF;
     }
+    .btnm{
+    width:280px;
+    height:30px;
+     background: #FFFFFF;
+     color:blue;
+    margin-right:140px;
+    margin-left:4%;
+  }
    }
    @media (max-width: 1199.98px)
    {
+    /*
+    {
+    width:300px;
+    grid-template-columns: auto;
+    justify-content: space-evenly;
+    grid-row-gap: 40px;
+    grid-column-gap:5%;
+    padding-left: 120px;
+    margin-bottom:20px;
+    margin-left:7%;
+   }*/
+   .grid-container
+   {
+    width:300px;
+    grid-template-columns: auto;
+    justify-content: space-evenly;
+    grid-row-gap: 40px;
+    grid-column-gap:5%;
+    padding-left: 0%;
+    margin-bottom:20px;
+    margin-left:15%;
+    margin-right:10%;
+   }
+   .im{
+     width:300px;
+     height:300px;
+     padding-left:0px;
+     transition: transform .2s;
+   }
     .font
     {
      font-size:130%;
      color:#FFFFFF;
     }
-   }
-
-   #navbarText{
-     font-size:12px;
+    .btnm{
+    width:280px;
+    height:30px;
+     background: #FFFFFF;
+     color:blue;
+    margin-right:10%;
+    margin-left:4%;
+  }
    }
 </style>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
