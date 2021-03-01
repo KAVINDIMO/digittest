@@ -13,12 +13,13 @@ import webbrowser
 from .models import review
 from .models import news
 from .models import event
+from .forms import EventForm
 from .forms import ImageForm
 from .models import UserProfile
 from .forms import EditProfileForm
 from .models import project
 from .models import achievements
-from .forms import EditProfileForm,UserProfileForm,EventForm,AcheivementForm,ProjectForm
+from .forms import EditProfileForm,UserProfileForm,AcheivementForm,ProjectForm
 from django.contrib import messages
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
 from django.urls import reverse_lazy
@@ -28,8 +29,6 @@ from .forms import Report
 # Create your views here.
 def comment(request):
     obj = review.objects.all()
-    
-    
     return render(request,"review.html",{'obj':obj})
 
 
@@ -75,17 +74,19 @@ def register(request):
         
         if form.is_valid():
             form.save()
-           
+            return redirect("/")
+        else:
+            return redirect("register/")
       
     
     context = {'form':form}
     return render(request,"register.html",context)
 
-def tmembers(request,tager="1"):
-       obj1=UserProfile.objects.get(idcard=1)
-       obj2=UserProfile.objects.get(idcard=2)
-       obj3=UserProfile.objects.get(idcard=3)
-       return render(request,"tmembers.html",{'obj1':obj1,'obj2':obj2,'obj3':obj3})
+#def tmembers(request,tager="1"):
+       #obj1=UserProfile.objects.get(idcard=1)
+       #obj2=UserProfile.objects.get(idcard=2)
+       #obj3=UserProfile.objects.get(idcard=3)
+       #return render(request,"tmembers.html",{'obj1':obj1,'obj2':obj2,'obj3':obj3})
       
 def aboutus(request):
     return render(request,"aboutus.html")
@@ -126,7 +127,7 @@ def projectupload(request):
             img_obj = form.instance
             return render(request, 'uploadproject.html', {'form': form, 'img_obj': img_obj})
     else:
-        form = ImageForm()
+        form = ProjectForm()
     return render(request, 'uploadproject.html', {'form': form})
 
 def addachievements(request):
@@ -138,7 +139,7 @@ def addachievements(request):
             img_obj = form.instance
             return render(request, 'addachievements.html', {'form': form, 'img_obj': img_obj})
     else:
-        form = ImageForm()
+        form = AcheivementForm()
     return render(request, 'addachievements.html', {'form': form})
 
 def eventspostupload(request):
@@ -151,11 +152,12 @@ def eventspostupload(request):
             img_obj = form.instance
             return render(request, 'addpostevents.html', {'form': form, 'img_obj': img_obj})
     else:
-        form = ImageForm()
+        form = EventForm()
     return render(request, 'addpostevents.html', {'form': form})
 
 def eventpost(request):
     obj=event.objects.all()
+    
     return render(request,"events.html",{'obj':obj})
 
 def profile(request,tager="1"):
@@ -227,3 +229,6 @@ def viewinfo(request,tager="1"):
             'obj':obj
         }
         return render(request,"viewinfo.html",context)
+
+def testingresize(request):
+    return render(request,"testingresize.html",{})
