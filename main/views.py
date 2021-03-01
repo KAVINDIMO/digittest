@@ -87,7 +87,9 @@ def register(request):
        #obj2=UserProfile.objects.get(idcard=2)
        #obj3=UserProfile.objects.get(idcard=3)
        #return render(request,"tmembers.html",{'obj1':obj1,'obj2':obj2,'obj3':obj3})
-      
+
+def tmembers(request):
+    return render(request,"tmembers.html")    
 def aboutus(request):
     return render(request,"aboutus.html")
 def contactus(request):
