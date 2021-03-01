@@ -13,10 +13,9 @@ import os
 from pathlib import Path
 from django.conf.urls.static import static
 from django.conf import settings
-from decouple import config
 import django_heroku
 import dj_database_url
-
+from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -31,7 +30,7 @@ SECRET_KEY = 'qw4&)y+1=d8&o))=@*@zk2n(e=u(b=p3&o)16^cbq!kyj4dr_+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1',"*"]
+ALLOWED_HOSTS = ['127.0.0.1','testdgt.herokuapp.com']
 
 
 # Application definition
@@ -51,20 +50,6 @@ INSTALLED_APPS = [
     'allauth.socialaccount',  
     'allauth.socialaccount.providers.google',
 ]
-
-MIDDLEWARE = [
-    'django.middleware.security.SecurityMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    
-]
-
-ROOT_URLCONF = 'DGTSQD.urls'
-
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -104,7 +89,34 @@ SOCIALACCOUNT_PROVIDERS = {
 }
 
 
+MIDDLEWARE = [
+    'django.middleware.security.SecurityMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+#    'whitenoise.middleware.WhiteNoiseMiddleware',
+]
 
+ROOT_URLCONF = 'DGTSQD.urls'
+
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [os.path.join(BASE_DIR,"templates")],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
 
 WSGI_APPLICATION = 'DGTSQD.wsgi.application'
 
@@ -118,18 +130,17 @@ WSGI_APPLICATION = 'DGTSQD.wsgi.application'
         #'NAME': BASE_DIR / 'db.sqlite3',
     #}
 #}
-
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'digit',
+        'ENGINE':'django.db.backends.postgresql_psycopg2',
+        'NAME': 'DGTSQD',
         'USER': 'postgres',
-        'PASSWORD': 'kavin',
-        'HOST': '127.0.0.1',
+        'PASSWORD': 'deathjustice',
+        'HOST': 'localhost',
         'PORT': '5432',
     }
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -149,11 +160,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-AUTHENTICATION_BACKENDS = (
- 'django.contrib.auth.backends.ModelBackend',
- 'allauth.account.auth_backends.AuthenticationBackend',
- )
-
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
@@ -171,7 +177,6 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
-
 
 STATIC_URL = '/static/'
 #STATICFILES_DIRS = [
@@ -216,5 +221,7 @@ STATICFILES_STORAGE = 'storages.backends.azure_storage.AzureStorage'
 DEFAULT_FILE_STORAGE = 'DGTSQD.custom_azure.AzureMediaStorage'
 
 
+
+#STATICFILES_STORAGE='whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 django_heroku.settings(locals())
